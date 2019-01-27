@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const store = require('./store.js');
+const axios = require('axios')
 
 const app = express();
 
@@ -16,6 +17,10 @@ app.post('/createUser', (request, response) => {
     .then(function() {
         return response.sendStatus(200)
     })
+})
+
+app.get('/users', (req, res) => {
+    res.send('Users List')
 })
 
 

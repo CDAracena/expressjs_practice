@@ -1,8 +1,8 @@
 module.exports = {
     client: 'mysql',
     connection: {
-        user: 'root',
-        password: 'root',
+        user: 'tester',
+        password: 'tester',
         database: 'tutorial_node_DB'
     }
 }

@@ -1,3 +1,4 @@
+
 const CreateUser = document.querySelector('.createUser');
 
 CreateUser.addEventListener('submit', (e) => {

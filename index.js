@@ -19,8 +19,16 @@ app.post('/createUser', (request, response) => {
     })
 })
 
-app.get('/users', (req, res) => {
-    res.send('Users List')
+app.post('/login', (req, res) => {
+    console.log('made a post request')
+    store.authenticate({
+        username: req.body.username,
+        password: req.body.password
+    })
+    .then( ({success}) => {
+        if (success) res.sendStatus(200)
+        else res.sendStatus(401)
+    })
 })
 
 
